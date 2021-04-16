@@ -1,0 +1,13 @@
+Step 1(optional):-create a virtual environment by using commands->
+        virtualenv env
+        env\scripts\activate
+        pip install -r requirements.txt
+Step 1:-create a superuser to manage admin console use the command -> 
+        python manage.py createsuperuser
+Step 2:-Keep migrating until all files are migrated by using the commands->
+        python manage.py makemigrations patientapp
+        python manage.py migrate(untill all migrations are done successfully)
+Step 3:-Install bootstrap by using command -> pip install django-bootstrap-v5
+Step 4:-Run the project on the server by using command->
+        python manage.py runserver
+step 5:-Go to http://localhost:8000 to view the project

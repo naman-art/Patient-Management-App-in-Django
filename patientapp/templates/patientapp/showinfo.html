@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+</head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+  margin : 200px 420px
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+h3{
+    font-size: 30px;
+}
+</style>
+<body style="background-image: url('https://thumbs.dreamstime.com/b/healthcare-technology-doctor-using-digital-tablet-icon-medical-network-hospital-background-162019727.jpg');background-repeat: no-repeat;background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%; ">
+
+
+
+
+    <div class="card" style="background-color: powderblue;">
+        
+        <div class="container">
+    <center>
+        <strong style="font-size: 50px;">User Information are ....</strong>
+        {% for i in obj %}
+        <div>
+            <h3>Username:{{i.username}}</h3>
+            <h3>UniqueID:{{i.uniqueID}}</h3>
+            <h3>DOB:{{i.dob}}</h3>
+        </div>
+        {% endfor %}
+
+    </center>
+</div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="{{ STATIC_URL }}style.css" />-->
+    <title>User Info</title>
+</head>
+<style>
+
+.img{
+    background-image: url('https://static01.nyt.com/images/2020/10/19/well/well-hospital-chen/well-hospital-chen-jumbo.jpg?quality=90&auto=webp' );
+     background-repeat: no-repeat;  
+     height: 100%;  
+     background-position: center;
+    background-size: cover;
+  }
+
+  .btndiv {
+ height:100px; 
+ margin-top:10px;
+ margin-bottom:10px;
+}
+
+.btnpop {
+ background: #3777c4; 
+ position: relative; 
+ padding: 20px 40px;
+ border-top: 0px; 
+ border-left: 0px; 
+ border-right: 0px;
+ border-bottom: 10px solid #265388;
+ color: white; font-size: 40px; 
+ font-family: Lucida Sans Unicode, sans-serif; 
+ vertical-align: middle; 
+ -webkit-border-radius: 15px; 
+ -moz-border-radius: 15px; 
+ border-radius: 15px; 
+ -webkit-box-shadow:0px 1px 15px 1px #999999;
+ box-shadow:0px 1px 15px 1px #999999;
+  transition: all 0.1s;
+}
+.btnpop:hover { 
+  top: -1px; 
+  border-bottom: 12px solid #265388; 
+  background: #4984cc;
+}
+.btnpop:active { 
+  top: 8px; 
+  border-bottom: 2px solid #265388;
+  background: #4984cc; 
+  -webkit-box-shadow:none;
+  box-shadow:none;
+}
+</style>
+<body class="img">
+ 
+    <div style="margin:250px 450px;"class="container">
+        <div class="row valign-wrapper">
+          <div class="col s6 offset-s3 valign">
+            <div style="background-color: powderblue;"class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <form action="auth_user" method="POST">
+                    {% csrf_token %}
+        
+        
+                    <label style="font-size:40px;"for="uid">Unique Id:</label>
+                    <input type="text" id="uid" name="uid" style="font-size:22pt;"><br><br>
+        
+                    <button class="btndiv btnpop" type="submit" class="btn-ghost">Submit</button>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>
